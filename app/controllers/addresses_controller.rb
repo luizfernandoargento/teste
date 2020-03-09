@@ -5,6 +5,10 @@ class AddressesController < ApplicationController
   # GET /addresses.json
   def index
     @addresses = Address.all
+    # Verifica se o formato pedido foi o JSON
+    if request.path_parameters[:format] == 'json'
+      render json: @addresses.to_json()
+    end
   end
 
   # GET /addresses/1

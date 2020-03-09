@@ -5,6 +5,10 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
     @members = Member.all
+    # Verifica se o formato pedido foi o JSON
+    if request.path_parameters[:format] == 'json'
+      render json: @members.to_json(:include => :addresses)
+    end
   end
 
   # GET /members/1
