@@ -22,7 +22,7 @@ class AddressesTest < ApplicationSystemTestCase
     fill_in "Postal code", with: @address.postal_code
     fill_in "State", with: @address.state
     fill_in "Street name", with: @address.street_name
-    fill_in "Tipo", with: @address.tipo
+    fill_in "Type", with: @address.address_type
     click_on "Create Address"
 
     assert_text "Address was successfully created"
@@ -41,7 +41,7 @@ class AddressesTest < ApplicationSystemTestCase
     fill_in "Postal code", with: @address.postal_code
     fill_in "State", with: @address.state
     fill_in "Street name", with: @address.street_name
-    fill_in "Tipo", with: @address.tipo
+    fill_in "Type", with: @address.address_type
     click_on "Update Address"
 
     assert_text "Address was successfully updated"

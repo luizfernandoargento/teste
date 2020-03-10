@@ -17,7 +17,7 @@ class AddressesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create address" do
     assert_difference('Address.count') do
-      post addresses_url, params: { address: { city: @address.city, complement: @address.complement, district: @address.district, member_id: @address.member_id, number: @address.number, postal_code: @address.postal_code, state: @address.state, street_name: @address.street_name, tipo: @address.tipo } }
+      post addresses_url, params: { address: { city: @address.city, complement: @address.complement, district: @address.district, member_id: @address.member_id, number: @address.number, postal_code: @address.postal_code, state: @address.state, street_name: @address.street_name, address_type: @address.address_type } }
     end
 
     assert_redirected_to address_url(Address.last)
@@ -34,7 +34,7 @@ class AddressesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update address" do
-    patch address_url(@address), params: { address: { city: @address.city, complement: @address.complement, district: @address.district, member_id: @address.member_id, number: @address.number, postal_code: @address.postal_code, state: @address.state, street_name: @address.street_name, tipo: @address.tipo } }
+    patch address_url(@address), params: { address: { city: @address.city, complement: @address.complement, district: @address.district, member_id: @address.member_id, number: @address.number, postal_code: @address.postal_code, state: @address.state, street_name: @address.street_name, address_type: @address.address_type } }
     assert_redirected_to address_url(@address)
   end
 

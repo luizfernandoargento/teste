@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Member</th>
-      <th>Tipo</th>
+      <th>Type</th>
       <th>Postal code</th>
       <th>State</th>
       <th>City</th>
@@ -22,7 +22,7 @@
     <% @addresses.each do |address| %>
       <tr>
         <td><%= address.member_id %></td>
-        <td><%= address.tipo %></td>
+        <td><%= address.address_type %></td>
         <td><%= address.postal_code %></td>
         <td><%= address.state %></td>
         <td><%= address.city %></td>
